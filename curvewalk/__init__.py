@@ -4,7 +4,7 @@ from functools import reduce
 
 def iterate_over(
     array: Any,
-    method: Callable[[int, Tuple[int, ...], Optional[Tuple[int, ...]]], int],
+    method: Callable[[int, Tuple[int, ...], Optional[Tuple[int, ...]]], Tuple[int,...]],
     order: Optional[Tuple[int, ...]] = None,
 ) -> Generator[Any, None, None]:
     '''
@@ -38,7 +38,7 @@ def iterate_over(
             yield array[pos]
     else:
         def get(a, p):
-        '''Recursive function to get the value at a specific position.'''
+            '''Recursive function to get the value at a specific position.'''
             if len(p) == 1:
                 return a[p[0]]
             else:
@@ -51,7 +51,7 @@ def iterate_over(
 
 def flatten(
     array: Any,
-    method: Callable[[int, Tuple[int, ...], Optional[Tuple[int, ...]]], int],
+    method: Callable[[int, Tuple[int, ...], Optional[Tuple[int, ...]]], Tuple[int, ...]],
     order: Optional[Tuple[int, ...]] = None,
 ) -> Any:
     """
