@@ -4,9 +4,13 @@ from functools import reduce
 
 def iterate_over(
     array: Any,
-    method: Callable[[int, Tuple[int, ...], Optional[Tuple[int, ...]]], int],
+    method: Callable[[int, Tuple[int, ...], Optional[Tuple[int, ...]]], Tuple[int,...]],
     order: Optional[Tuple[int, ...]] = None,
 ) -> Generator[Any, None, None]:
+    '''
+    Use a walker method to iterate over an array. The array can either be a
+    plain python array or a numpy style array.
+    '''
     shape = []
     allows_multidimension = False
 
@@ -33,8 +37,8 @@ def iterate_over(
             pos = method(i, shape, order)
             yield array[pos]
     else:
-        # Recursive function to get the value at a specific position
         def get(a, p):
+            '''Recursive function to get the value at a specific position.'''
             if len(p) == 1:
                 return a[p[0]]
             else:
@@ -47,7 +51,7 @@ def iterate_over(
 
 def flatten(
     array: Any,
-    method: Callable[[int, Tuple[int, ...], Optional[Tuple[int, ...]]], int],
+    method: Callable[[int, Tuple[int, ...], Optional[Tuple[int, ...]]], Tuple[int, ...]],
     order: Optional[Tuple[int, ...]] = None,
 ) -> Any:
     """
