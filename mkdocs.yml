@@ -1,0 +1,30 @@
+site_name: curvewalk
+site_url: !ENV READTHEDOCS_CANONICAL_URL
+repo_url: https://github.com/mark-goodall/curvewalk/
+theme:
+  name: material
+  logo: images/logo.png
+  favicon: images/favicon.png
+  features:
+    - search.suggest
+    - search.highlight
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            docstring_style: sphinx
+            docstring_section_style: list
+            members_order: source
+            show_root_heading: true
+            show_source: false
+            show_signature_annotations: true
+nav:
+  - Introduction: "index.md"
+  - Installation: "install.md"
+  - quickstart.md
+  - API:
+      - curvewalk: "api/index.md"
+      - curvewalk.lawnmower: "api/lawnmower.md"
+      - curvewalk.hilbert: "api/hilbert.md"
