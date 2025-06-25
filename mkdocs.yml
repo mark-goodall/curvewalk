@@ -28,3 +28,4 @@ nav:
       - curvewalk: "api/index.md"
       - curvewalk.lawnmower: "api/lawnmower.md"
       - curvewalk.hilbert: "api/hilbert.md"
+      - curvewalk.zorder: "api/zorder.md"

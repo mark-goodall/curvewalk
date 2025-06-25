@@ -14,6 +14,7 @@ A space-filling curve is a curve or path which travels through every point in a 
 
 * Lawnmower or Boustrophedon over arbitrary array sizes and dimensions.
 * Hilbert curve over 2D square power of two arrays.
+* Z-curve (Morton order) over any dimension power of two arrays.
 
 ## Licence
 

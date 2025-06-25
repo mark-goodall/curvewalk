@@ -1,4 +1,4 @@
-from curvewalk.zorder import zorder
+from curvewalk.zorder import zorder, inverse_zorder
 import pytest
 from functools import reduce
 from hypothesis import given, strategies as st
@@ -9,6 +9,11 @@ def test_minimal_2d_zorder():
     assert zorder(1, (2, 2)) == (1, 0)
     assert zorder(2, (2, 2)) == (0, 1)
     assert zorder(3, (2, 2)) == (1, 1)
+
+    assert inverse_zorder((0, 0), (2, 2)) == 0
+    assert inverse_zorder((1, 0), (2, 2)) == 1
+    assert inverse_zorder((0, 1), (2, 2)) == 2
+    assert inverse_zorder((1, 1), (2, 2)) == 3
 
 
 def test_zorder_invalid_args():
@@ -23,6 +28,16 @@ def test_zorder_invalid_args():
             0,
             (2, -2),
         )
+    with pytest.raises(ValueError):
+        inverse_zorder((0, 0), (2, 2), (0, 1, 2))
+    with pytest.raises(ValueError):
+        inverse_zorder((0, 0), (2, 2, 2), (0, 1, 2))
+    with pytest.raises(ValueError):
+        inverse_zorder((0, 0, 0), (2, 0, 2), (0, 1, 2))
+    with pytest.raises(ValueError):
+        inverse_zorder((0, 0, 0), (2, 4, 2), (0, 1, 2))
+    with pytest.raises(ValueError):
+        inverse_zorder((0, 0, 0), (3, 3, 3), (0, 1, 2))
 
 
 @st.composite
@@ -45,6 +60,8 @@ def test_satisfies_zorder_constraints(shape_and_order):
     for i in range(size):
         position = zorder(i, shape, order)
         pos.add(position)
+
+        assert inverse_zorder(position, shape, order) == i
 
         for j in range(dims):
             assert 0 <= position[j] < shape[order[j]], (

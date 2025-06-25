@@ -9,3 +9,4 @@ A straightforward implementation of space filling curves over an array or fixed 
 
 * Lawnmower or Boustrophedon over arbitrary array sizes and dimensions.
 * Hilbert curve over 2d square power of two arrays.
+* Z-curve (Morton order) over any dimension power of two arrays.
