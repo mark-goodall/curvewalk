@@ -1,3 +1,10 @@
+## v0.3.0 (2025-06-25)
+
+### Feat
+
+- added inverse_zorder
+- added z-order index
+
 ## v0.2.0 (2025-06-24)
 
 ### Feat
