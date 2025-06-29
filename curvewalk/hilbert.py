@@ -20,7 +20,6 @@ def hilbert(
         raise ValueError("Shape dimension must be a power of two for Hilbert curve.")
 
     iterations = dim.bit_length() - 1
-    print(iterations)
 
     if len(shape) == 2:
 
@@ -42,7 +41,6 @@ def hilbert(
         dir = (0, 1)
 
         path = list(path)
-        print(path)
 
         def iterate_2d(
             position: Tuple[int, int], direction: Tuple[int, int], next: str
