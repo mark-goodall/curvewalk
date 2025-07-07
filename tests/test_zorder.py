@@ -1,4 +1,5 @@
-from curvewalk.zorder import zorder, inverse_zorder
+import numpy as np
+from curvewalk.zorder import zorder, inverse_zorder, zordered
 import pytest
 from functools import reduce
 from hypothesis import given, strategies as st
@@ -79,3 +80,15 @@ def test_satisfies_zorder_constraints(shape_and_order):
         previous = position
 
     assert len(pos) == size
+
+
+def test_zorder_generator():
+    array = np.array([[0, 1], [2, 3]])
+    result = list(zordered(array))
+    expected = [0, 2, 1, 3]
+    assert result == expected
+
+    # Test with a different order
+    result = list(zordered(array, order=(1, 0)))
+    expected = [0, 1, 2, 3]
+    assert result == expected

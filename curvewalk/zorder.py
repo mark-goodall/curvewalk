@@ -1,4 +1,4 @@
-from typing import Optional, Tuple
+from typing import Any, Generator, Optional, Tuple
 
 
 def zorder(
@@ -38,6 +38,40 @@ def zorder(
             index >>= 1
 
     return tuple(position)
+
+
+def zordered(
+    array: Any, order: Optional[Tuple[int, ...]] = None
+) -> Generator[Any, None, None]:
+    """
+    Returns a generator that yields elements of the array in z-order.
+    If order is specified, perform the iteration over a different ordering
+    of the axes.
+    """
+    if order is None:
+        order = tuple(range(len(array.shape)))
+
+    shape = array.shape
+
+    if len(order) != len(shape):
+        raise ValueError("Order must match the number of dimensions in array.")
+
+    if not all(s > 0 for s in shape):
+        raise ValueError("All dimensions in shape must be greater than zero.")
+
+    dim = shape[0]
+    if (dim & (dim - 1)) != 0 and dim > 1:
+        raise ValueError("Shape size must be a power of 2 for z-ordering.")
+
+    bit_length = dim.bit_length()
+
+    for index in range(dim ** len(shape)):
+        position = [0] * len(shape)
+        for bit in range(bit_length):
+            for axis in order:
+                position[axis] |= (index & 0x1) << bit
+                index >>= 1
+        yield array[*position]
 
 
 def inverse_zorder(
