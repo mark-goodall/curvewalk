@@ -19,7 +19,7 @@ hypothesis = "^6.138.5"
 numpy = "^2.3.3"
 mkdocs = "^1.6.1"
 mkdocs-material = "^9.6.20"
-mkdocstrings = {extras = ["python"], version = "^0.29.1"}
+mkdocstrings = {extras = ["python"], version = "^0.30.1"}
 matplotlib = "^3.10.6"
 pyqt6 = "^6.9.1"
 
