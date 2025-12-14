@@ -1,3 +1,9 @@
+## v0.4.0 (2025-12-14)
+
+### Feat
+
+- added faster iterator for zorder
+
 ## v0.3.0 (2025-06-25)
 
 ### Feat
