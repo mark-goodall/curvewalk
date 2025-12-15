@@ -37,7 +37,7 @@ jobs:
       - if: ${{ matrix.poetry-version != 'latest' }}
         run: pipx install poetry==${{ matrix.poetry-version }}
 
-      - uses: actions/cache@v4
+      - uses: actions/cache@v5
         name: Setup cache
         with:
           path: ./.venv
