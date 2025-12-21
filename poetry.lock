@@ -1419,38 +1419,38 @@ diagrams = ["jinja2", "railroad-diagrams"]
 
 [[package]]
 name = "pyqt6"
-version = "6.9.1"
+version = "6.10.1"
 description = "Python bindings for the Qt cross platform application toolkit"
 optional = false
 python-versions = ">=3.9"
 groups = ["dev"]
 files = [
-    {file = "pyqt6-6.9.1-cp39-abi3-macosx_10_14_universal2.whl", hash = "sha256:33c23d28f6608747ecc8bfd04c8795f61631af9db4fb1e6c2a7523ec4cc916d9"},
-    {file = "pyqt6-6.9.1-cp39-abi3-manylinux_2_28_x86_64.whl", hash = "sha256:37884df27f774e2e1c0c96fa41e817a222329b80ffc6241725b0dc8c110acb35"},
-    {file = "pyqt6-6.9.1-cp39-abi3-manylinux_2_39_aarch64.whl", hash = "sha256:055870b703c1a49ca621f8a89e2ec4d848e6c739d39367eb9687af3b056d9aa3"},
-    {file = "pyqt6-6.9.1-cp39-abi3-win_amd64.whl", hash = "sha256:15b95bd273bb6288b070ed7a9503d5ff377aa4882dd6d175f07cad28cdb21da0"},
-    {file = "pyqt6-6.9.1-cp39-abi3-win_arm64.whl", hash = "sha256:08792c72d130a02e3248a120f0b9bbb4bf4319095f92865bc5b365b00518f53d"},
-    {file = "pyqt6-6.9.1.tar.gz", hash = "sha256:50642be03fb40f1c2111a09a1f5a0f79813e039c15e78267e6faaf8a96c1c3a6"},
+    {file = "pyqt6-6.10.1-cp39-abi3-macosx_10_14_universal2.whl", hash = "sha256:3c32d738c3fe7434e9008c6aed2897742952a0634383fe5fabaf390139a7726e"},
+    {file = "pyqt6-6.10.1-cp39-abi3-manylinux_2_34_x86_64.whl", hash = "sha256:46aee0453606097ba35645806fb8cb4019d3825781ff94c5070da7f97bb243d8"},
+    {file = "pyqt6-6.10.1-cp39-abi3-manylinux_2_39_aarch64.whl", hash = "sha256:d2f4c3475d1660c343061e64724fccd1e44ec00017f1c89625660de1855a9beb"},
+    {file = "pyqt6-6.10.1-cp39-abi3-win_amd64.whl", hash = "sha256:9cc63abb4136f9c71b39381874ca37ba2b8b920085828497176f3ef50fb72ac2"},
+    {file = "pyqt6-6.10.1-cp39-abi3-win_arm64.whl", hash = "sha256:b943c2c2b0890db203b1af72714490afa8870b372ceb935cad70877a4e57c0c8"},
+    {file = "pyqt6-6.10.1.tar.gz", hash = "sha256:d733a6c712c0b7a7b99e4ad59b211ea25a5d1b9d1131e47a1f50b5e524266e57"},
 ]
 
 [package.dependencies]
-PyQt6-Qt6 = ">=6.9.0,<6.10.0"
+PyQt6-Qt6 = ">=6.10.0,<6.11.0"
 PyQt6-sip = ">=13.8,<14"
 
 [[package]]
 name = "pyqt6-qt6"
-version = "6.9.1"
+version = "6.10.1"
 description = "The subset of a Qt installation needed by PyQt6."
 optional = false
 python-versions = "*"
 groups = ["dev"]
 files = [
-    {file = "pyqt6_qt6-6.9.1-py3-none-macosx_10_14_x86_64.whl", hash = "sha256:3854c7f83ee4e8c2d91e23ab88b77f90e2ca7ace34fe72f634a446959f2b4d4a"},
-    {file = "pyqt6_qt6-6.9.1-py3-none-macosx_11_0_arm64.whl", hash = "sha256:123e4aeb037c099bb4696a3ea8edcb1d9d62cedd0b2b950556b26024c97f3293"},
-    {file = "pyqt6_qt6-6.9.1-py3-none-manylinux_2_28_x86_64.whl", hash = "sha256:cc5bd193ebd2d1a3ec66e1eee65bf532d762c239459bce1ecebf56177243e89b"},
-    {file = "pyqt6_qt6-6.9.1-py3-none-manylinux_2_39_aarch64.whl", hash = "sha256:b065af7243d1d450a49470a8185301196a18b1d41085d3ef476eb55bbb225083"},
-    {file = "pyqt6_qt6-6.9.1-py3-none-win_amd64.whl", hash = "sha256:f9e54c424bc921ecb76792a75d123e4ecfc26b00b0c57dae526f41f1d57951d3"},
-    {file = "pyqt6_qt6-6.9.1-py3-none-win_arm64.whl", hash = "sha256:432caaedf5570bc8a9b7c75bc6af6a26bf88589536472eca73417ac019f59d41"},
+    {file = "pyqt6_qt6-6.10.1-py3-none-macosx_10_14_x86_64.whl", hash = "sha256:4bb2798a95f624b462b70c4f185422235b714b01e55abab32af1740f147948e2"},
+    {file = "pyqt6_qt6-6.10.1-py3-none-macosx_11_0_arm64.whl", hash = "sha256:0921cc522512cb40dbab673806bc1676924819550e0aec8e3f3fe6907387c5b7"},
+    {file = "pyqt6_qt6-6.10.1-py3-none-manylinux_2_34_x86_64.whl", hash = "sha256:04069aea421703b1269c8a1bcf017e36463af284a044239a4ebda3bde0a629fb"},
+    {file = "pyqt6_qt6-6.10.1-py3-none-manylinux_2_39_aarch64.whl", hash = "sha256:5b9be39e0120e32d0b42cdb844e3ae110ddadd39629c991e511902c06f155aff"},
+    {file = "pyqt6_qt6-6.10.1-py3-none-win_amd64.whl", hash = "sha256:df564d3dc2863b1fde22b39bea9f56ceb2a3ed7d6f0b76d3f96c2d3bc5d71516"},
+    {file = "pyqt6_qt6-6.10.1-py3-none-win_arm64.whl", hash = "sha256:48282e0f99682daf4f1e220cfe9f41255e003af38f7728a30d40c76e55c89816"},
 ]
 
 [[package]]
@@ -1944,4 +1944,4 @@ files = [
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.12"
-content-hash = "1b6851c2ef3bb0eb7daa13b936a6d9532c8318b76069a4f5fac25a212f520ef2"
+content-hash = "9d7bc14f3bf472fb08a25f8b8f4662e4370240fa552773fa003fd6f7bfcf7a6f"
