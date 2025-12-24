@@ -11,7 +11,7 @@ python = "^3.12"
 
 [tool.poetry.group.dev.dependencies]
 pyright = "^1.1.407"
-pytest = "^8.4.2"
+pytest = "^9.0.2"
 commitizen = "^4.10.1"
 ruff = "^0.14.6"
 pytest-cov = "^7.0.0"
