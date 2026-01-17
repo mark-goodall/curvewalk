@@ -16,7 +16,7 @@ commitizen = "^4.10.1"
 ruff = "^0.14.10"
 pytest-cov = "^7.0.0"
 hypothesis = "^6.148.7"
-numpy = "^2.3.5"
+numpy = "^2.4.1"
 mkdocs = "^1.6.1"
 mkdocs-material = "^9.7.1"
 mkdocstrings = {extras = ["python"], version = "^1.0.0"}
