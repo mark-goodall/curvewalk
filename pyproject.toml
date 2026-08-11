@@ -21,7 +21,7 @@ mkdocs = "^1.6.1"
 mkdocs-material = "^9.7.1"
 mkdocstrings = {extras = ["python"], version = "^1.0.0"}
 matplotlib = "^3.10.8"
-pyqt6 = "^6.10.1"
+pyqt6 = "^6.10.2"
 
 [build-system]
 requires = ["poetry-core"]
